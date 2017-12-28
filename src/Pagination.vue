@@ -6,6 +6,7 @@
         v-bind:class="{ 'VueCarousel-dot--active': (index === parentContainer.currentPage) }"
         v-for="(page, index) in parentContainer.pageCount"
         v-on:click="parentContainer.goToPage(index)"
+        :key="index"
         :style="`
           margin-top: ${parentContainer.paginationPadding * 2}px;
           padding: ${parentContainer.paginationPadding}px;
