@@ -4,7 +4,6 @@
     flex-basis: ${slideWidth > 1 ? slideWidth + 'px' : 'inherit'};
     ${slideWidth > 1 ? 'min-width:' + slideWidth + 'px' : ''};
   `">
-    <h1>Width: {{slideWidth}}</h1>
     <slot></slot>
   </div>
 </template>
