@@ -52,6 +52,16 @@
       Pagination,
       Slide
     },
+    provide() {
+      const carousel = {}
+      Object.defineProperty(carousel, 'slideWidth', {
+        enumerable: true,
+        get: () => this.slideWidth,
+      })
+      return {
+        carousel
+      }
+    },
     data() {
       return {
         browserWidth: null,
