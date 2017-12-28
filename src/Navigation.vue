@@ -70,19 +70,24 @@
   .VueCarousel-navigation-button {
     position: absolute;
     top: 50%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     color: #000;
     text-decoration: none;
   }
 
   .VueCarousel-navigation-next {
     right: 0;
-    transform: translateY(-50%) translateX(100%)
+    -webkit-transform: translateY(-50%) translateX(100%);
+        -ms-transform: translateY(-50%) translateX(100%);
+            transform: translateY(-50%) translateX(100%)
   }
 
   .VueCarousel-navigation-prev {
     left: 0;
-    transform: translateY(-50%) translateX(-100%)
+    -webkit-transform: translateY(-50%) translateX(-100%);
+        -ms-transform: translateY(-50%) translateX(-100%);
+            transform: translateY(-50%) translateX(-100%)
   }
 
   .VueCarousel-navigation--disabled {

@@ -4,8 +4,18 @@
       <div
         class="VueCarousel-inner"
         v-bind:style="`
+          -webkit-transform: translateX(${currentOffset}px);
+              -ms-transform: translateX(${currentOffset}px);
+                  transform: translateX(${currentOffset}px);
+          -webkit-transition: ${transitionStyle};
+          -o-transition: ${transitionStyle};
+          transition: ${transitionStyle};
+          -ms-flex-preferred-size: ${slideWidth}px;
+              flex-basis: ${slideWidth}px;
+          visibility: visible
           transform: translateX(${currentOffset}px);
           transition: ${transitionStyle};
+          width: ${slideWidth}px;
           flex-basis: ${slideWidth}px;
           visibility: ${slideWidth ? 'visible' : 'hidden'}
         `"
@@ -490,8 +500,14 @@
 }
 
 .VueCarousel-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  backface-visibility: hidden;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 </style>
