@@ -661,6 +661,9 @@ export default {
     }
   },
   mounted() {
+    if (this.navigateTo !== this.currentPage) {
+      this.goToPage(this.navigateTo);
+    }
     if (!this.$isServer) {
       window.addEventListener(
         "resize",
