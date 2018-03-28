@@ -662,7 +662,9 @@ export default {
   },
   mounted() {
     if (this.navigateTo !== this.currentPage) {
-      this.goToPage(this.navigateTo);
+      setTimeout(() => {
+        this.goToPage(this.navigateTo)
+      }, 200);
     }
     if (!this.$isServer) {
       window.addEventListener(
